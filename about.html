@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+	<head>
+		<meta charset="UTF-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" type="text/css" href="{%static  'css/styles.css'%}">
+		<link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+		<link rel="shortcut icon" href="{%static  'resources/favicon.ico'%}">
+
+		<title>About Me</title>
+	</head>
+	<style>
+		#homebutton {
+			font-family: Ubuntu Mono, serif;
+		}
+		html {
+			height: max-content;
+			margin-top: -10px;
+			background-color: #181a1b;
+		}
+		body {
+			width: 100%;
+			height: 100%;
+			background-color:inherit;
+			color: white;
+		}
+
+		#control-container {
+			overflow: hidden;
+			flex-direction: column;
+			padding-top: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background-color: #090300;
+		}
+		.control-circles {
+			height: 1.8vh;
+			width: 1.8vh;
+			border-radius: 25px;
+			margin: 0px .2vw 0px .2vw;
+		}
+		#codeblock-container {
+			height: fit-content; 
+			width: 700px;
+			height: 850px;
+			border-radius: 5px;
+			background-color: #22212C !important;
+			padding: 0px 10px 10px 10px;
+			position: absolute;
+			transition: width .3s, height .3s;
+		}
+		#codeblock-header:hover {
+			cursor: all-scroll;
+		}
+		.control-circles:hover {
+			cursor: pointer;
+		}
+
+	</style>
+	<body>
+		<a href="/" id="homeButton">cd ~</a>
+
+		<!-- shits boutta get wacky -->
+
+			<div id="control-container">
+				<div id="codeblock-container">
+				<div id="codeblock-header"style="width: 100%; height: 3vh;display: flex;justify-content: end;align-items: center;">
+					<div class="control-circles" style="background-color: #27c93f;"></div>
+					<div onclick="toggleFull()" id="fullscreen"class="control-circles" style="background-color: #ffbd2e;"></div>
+					<div onclick="window.location.href='/'" class="control-circles" style="background-color: #ff5f56;"></div>
+				</div>
+					<div class="CodeMirror-code" role="presentation" style=""><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-comment">// Just some code to print out my resume</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-comment">// Also, feel free to drag this window around(if you're not on mobile)! Have fun with it! Maybe &nbsp;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-comment">// even try to push it out the window! Works just like Windows, just "more optimized and </span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-comment">// streamlined!"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-comment">// Not a programmer? Just follow the yellow and purple text :D </span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-comment">#include &lt;iostream&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-comment">#include &lt;map&gt;</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-variable">int</span> <span class="cm-variable">main</span>()</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation">{</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"> &nbsp;<span class="cm-variable">std</span>::<span class="cm-variable">cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">"Hi, my name is sudocanttype, and this is my webpage! \n"</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"> &nbsp;<span class="cm-variable">std</span>::<span class="cm-variable">cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">"My skills include... \n"</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"> &nbsp;<span class="cm-variable">std</span>::<span class="cm-variable">map</span><span class="cm-operator">&lt;</span><span class="cm-variable">std</span>::<span class="cm-variable">string</span>, <span class="cm-variable">int</span><span class="cm-operator">&gt;</span> <span class="cm-variable">my_skills</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"> &nbsp;<span class="cm-comment">// map ordered as {Skill : Years Of Experience}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable">my_skills</span>[<span class="cm-string">"Real Life Work Experience"</span>] <span class="cm-operator">=</span> <span class="cm-number">2</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable">my_skills</span>[<span class="cm-string">"Linux"</span>] <span class="cm-operator">=</span> <span class="cm-number">6</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable">my_skills</span>[<span class="cm-string">"Server Management"</span>] <span class="cm-operator">=</span> <span class="cm-number">5</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable">my_skills</span>[<span class="cm-string">"Frontend Development"</span>] <span class="cm-operator">=</span> <span class="cm-number">4</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable">my_skills</span>[<span class="cm-string">"Backend Development"</span>] <span class="cm-operator">=</span> <span class="cm-number">3</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable">my_skills</span>[<span class="cm-string">"Git"</span>] <span class="cm-operator">=</span> <span class="cm-number">3</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable">my_skills</span>[<span class="cm-string">"Python"</span>] <span class="cm-operator">=</span> <span class="cm-number">3</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable">my_skills</span>[<span class="cm-string">"ReactJS"</span>] <span class="cm-operator">=</span> <span class="cm-number">3</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable">my_skills</span>[<span class="cm-string">"Docker Containerization"</span>] <span class="cm-operator">=</span> <span class="cm-number">2</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable">my_skills</span>[<span class="cm-string">"DevOps &amp;&amp; Integration Testing"</span>] <span class="cm-operator">=</span> <span class="cm-number">2</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-variable">my_skills</span>[<span class="cm-string">"NodeJS"</span>] <span class="cm-operator">=</span> <span class="cm-number">1</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"> &nbsp;<span class="cm-comment">// prints map of my skills in human readable format</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"> &nbsp;<span class="cm-keyword">for</span>(<span class="cm-variable">std</span>::<span class="cm-variable">map</span><span class="cm-operator">&lt;</span><span class="cm-variable">std</span>::<span class="cm-variable">string</span>,<span class="cm-variable">int</span><span class="cm-operator">&gt;</span>::<span class="cm-variable">iterator</span> <span class="cm-variable">it</span><span class="cm-operator">=</span><span class="cm-variable">my_skills</span>.<span class="cm-variable">begin</span>(); <span class="cm-variable">it</span><span class="cm-operator">!=</span><span class="cm-variable">my_skills</span>.<span class="cm-builtin">end</span>(); <span class="cm-operator">++</span><span class="cm-variable">it</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"> &nbsp; &nbsp; &nbsp;<span class="cm-variable">std</span>::<span class="cm-variable">cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">it</span><span class="cm-operator">-&gt;</span><span class="cm-variable">second</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">"</span> <span class="cm-string">year(s) of experience in "</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">it</span><span class="cm-operator">-&gt;</span><span class="cm-variable">first</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">"\n"</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"> &nbsp;<span class="cm-variable">std</span>::<span class="cm-variable">cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">"Thanks for checking my profile out, and hopefully my code wasn't too atrocious!"</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation"> &nbsp;<span class="cm-keyword">return</span> <span class="cm-number">0</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation">}</span></pre></div>
+				</div>
+			</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="{%static 'js/script.js'%}"></script>
+		<script>
+			window.onload= ()=>{
+						$(".container").css("top", parseFloat($("#homeButton").css("top")) + $("#homeButton").height() +"px")
+						setTimeout(()=>{
+							$("#homeButton").css("transition", "all .5s ease-in-out");
+						}, 500)
+				//make this shit responsive
+				if(window.innerHeight < 850 || window.innerWidth < 700){
+					$("#codeblock-container").css("width", "100%")
+					$("#codeblock-container").css("height", "100%")
+					$("#codeblock-header").css("display", "none")
+
+					$("#control-container").css("overflow", "auto")
+					$("#control-container").css("background-color", "#22212C")
+
+					$("#homeButton").css("z-index", "100")
+
+					$("#codeblock-header").css("display", "none")
+					$(".CodeMirror-code").css("padding", "10px 0  0px 10px")
+
+				}
+
+					}
+			var toggled = false
+			var style_string; 
+			document.getElementById("fullscreen").onclick = function(){
+				if (!toggled){
+					style_string = document.getElementById('codeblock-container').style
+					document.getElementById('codeblock-container').style='width: 98%; height: 98%;'
+					toggled = true;
+				} else {
+					document.getElementById('codeblock-container').style=style_string
+					toggled = false;
+				}
+			};
+			//dragging stuff
+		dragElement(document.getElementById("codeblock-container"));
+
+		function dragElement(elmnt) {
+			var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+			document.getElementById("codeblock-header").onmousedown = dragMouseDown;
+
+			function dragMouseDown(e) {
+				e = e || window.event;
+				e.preventDefault();
+				pos3 = e.clientX;
+				pos4 = e.clientY;
+				document.onmouseup = closeDragElement;
+				document.onmousemove = elementDrag;
+			}
+
+			function elementDrag(e) {
+				e = e || window.event;
+				e.preventDefault();
+				let xbound = document.getElementById("control-container").clientWidth
+				let ybound = document.getElementById("control-container").clientHeight
+				pos1 = pos3 - e.clientX;
+				pos2 = pos4 - e.clientY;
+				pos3 = e.clientX;
+				pos4 = e.clientY;
+				if(!toggled && pos3 > 0 && pos4 > 0 && pos3 < xbound && pos4 < ybound){
+					elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+					elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+				}
+			}
+
+			function closeDragElement() {
+				document.onmouseup = null;
+				document.onmousemove = null;
+			}
+		}
+		</script>
+
+		<!-- dont touch this - code formatting stuff -->
+		<style>
+		.cm-property {
+			color: #80FFEA !important;
+		}
+		.cm-operator {
+			color: #FF80BF !important;
+		}
+		.cm-variable {
+			color: #8AFF80 !important;
+		}
+		.cm-comment {
+	color: #7970A9 !important;
+}
+			.cm-string, .cm-string-2 {
+	color: #FFFF80 !important;
+}
+			.cm-number {
+	color: #9580FF !important;
+}
+			.cm-keyword {
+	color: #FF80BF !important;
+}
+			.CodeMirror-code {
+				outline: 0;
+				background-color: #22212C !important;
+				line-height: 70%;
+			  font-size: small;
+
+			}
+
+
+			.CodeMirror-wrap pre.CodeMirror-line, .CodeMirror-wrap pre.CodeMirror-line-like {
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	word-break: normal;
+}
+
+		.CodeMirror pre.CodeMirror-line, .CodeMirror pre.CodeMirror-line-like {
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	border-width: 0;
+	background: 0 0;
+	font-family: inherit;
+	font-size: inherit;
+	margin: 0;
+	white-space: pre;
+	word-wrap: normal;
+	line-height: inherit;
+	color: inherit;
+	z-index: 2;
+	position: relative;
+	overflow: visible;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-font-variant-ligatures: contextual;
+	font-variant-ligatures: contextual;
+}
+		</style>
+	</body>
+</html>
