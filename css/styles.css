@@ -500,3 +500,20 @@ h3{
 	font-family: 'Ubuntu Mono', monospace;
 	font-size: 20px;
 }
+
+#error_header{
+	background-color: red;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#error_header>p{
+	font-family: 'Ubuntu Mono', monospace;
+	font-size: 20px;
+}
+#error_header>svg{
+	height: 40px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
