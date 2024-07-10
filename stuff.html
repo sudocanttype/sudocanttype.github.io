@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{%static  'css/styles.css'%}">
+		<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Anaheim' rel='stylesheet'>
+
+		<link rel="shortcut icon" href="{%static  'resources/favicon.ico'%}">
+
+
+		<title>Projects</title>
+	</head>
+	<body class="preload" style="background-color:#090300;"> 
+		
+
+
+
+
+		<div id="donatewrapper">
+			<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+			<div id="donate">
+				<p style="font-size:25px; text-align:left">Donate</p>
+				<p style="text-align: left;">Programming is hard and time extensive. I provide this website <br> completely ad-free and out of my own pocket. If you enjoy or use <br> the content I create, please consider donating using the link below<br>as it really helps and motivates me to program more cool stuff.</p>
+				<!-- <a href=""></a> -->
+				<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="butwhy" data-color="#000000" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee(but its probably gonna be an energy drink)" data-outline-color="#fff" data-font-color="#fff" data-coffee-color="#fd0" ></script>
+			</div>
+		</div>
+		<a href="/" id="homeButton">cd ~</a>
+		<div class="stuffs">
+			<div class="idkman" id="lmao">
+				<div class="stuff-entry">
+					<a href="{% url 'main-home'%}">butwhyagain.xyz</a>
+					<p>It is the website you are on right now(wow, no really). Or it might not be, depending on whether I remembered
+						to renew the domain. It's still very much a work 
+						in progress, but it's home to the cool(not biased, trust me bro) stuff that I made.
+						This website is completely built from scratch and is hosted from my dedicated Debian Linux server. 
+						The frontend is built
+						with plain HTML, CSS, and Javascript, with plans for a React JS rewrite underway. Apache2 and Django
+						are the core of the backend, with some services and automized scripts assisting in
+						the upkeep of this website.</p>
+				</div>
+				<div class="stuff-entry">
+					<a href="{%url 'main-anonchat'%}">AnonChat</a>
+					<p>A completely anonymous chat room. Have you ever noticed how we, as humans, get significantly more toxic
+						and rude when we can hide behind the veil of the internet, where we attain a sense of security
+						that what we say will have no backlash and therefore we can say whatever we want without the normal
+						social consequences? Neither have I. Now to blatantly ignore everything I just said, here's AnonChat!
+						It is a private chat room where you can say whatever is on your mind, with no fear of logs or data collection. 
+						AnonChat is built using HTML, CSS, and Javascript, but with a splash of Docker Redis and backend magic.</p>
+				</div>
+
+				<div class="stuff-entry">
+					<a href="https://github.com/sudocanttype/Auditory_Unveil">AuditoryUnveil</a>
+					<p>Do you ever struggle to make out someone's emotions while they're talking with you? Well, this 
+					probably can't help with that. However, I present to you Auditory Unveil, a project done in collaboration
+					with the Association of Computing and Machinery. Through the fusion of advanced audio analysis and 
+					Convolutional Neural Networks, this project is designed to decode the intricate nuances of human emotion 
+					as expressed through speech. By processing audio signals and extracting emotional cues, it can open up a 
+					world of applications, from sentiment analysis in auditory customer feedback to developing AI-driven mental health 
+					monitoring solutions. Built using Python, Pandas, Tensorflow, Keras, Jupyter Notebook, and a significant amount of 
+					3Blue1Brown.</p>
+				</div>
+
+				<div class="stuff-entry">
+					<a href="{% url 'main-boorureader'%}">BooruReader</a>
+					<p>A site I created in order to improve the browsing experience of a variety of imageboards, known as
+					boorus. For the less “cultured” of you who have not been on such sites, the navigation and general
+					interface is a mess and a pain to navigate. I decided to create a better browser that focused on the 
+					images, not any of the unnecessary BS that the boorus come with. And yes, it has both SFW and NSFW
+					content. However, an account is required to be able to access any of the NSFW content. (Don’t worry,
+					you don’t even need to enter your email!)</p>
+					<p style="font-size: x-small;">By creating an account on boorureader, you are confirming that you are, in fact, 18+ and willing to 
+																				see NSFW material.</p>
+				</div>
+
+				<div class="stuff-entry">
+					<a href="https://github.com/sudocanttype/NoQuora">ScrewQuora</a>
+					<p>Once upon a time, I googled a question that lead me into Quora(that's how you
+						know you're really in the trenches). I found a related question on the sidebar that seemed 
+						to line up perfectly with what I was looking for, and of course I clicked it. Next thing I know,
+						I'm being assaulted by popups left and right, screaming for me to make an account.
+						My blood boiled. Instead of spending 1 minute just making 
+						an account, I, in true programmer fashion,
+						spent multiple hours researching and creating this Google Chrome and Firefox-compatible extension that 
+						bypasses Quora's "Login to View" accountwall. Screw registration walls.</p>
+				</div>
+				<div class="stuff-entry">
+					<a href="{% url 'py-rpihome'%}">Python Side Projects</a>
+					<p>A general dump of mostly useless stuff I made in Python in my free time, most of which are EdaBit and
+						Leetcode challenges. I will also store my calculators/problem solvers here. They are all written in
+						Python, and ran client-side using Brython.</p>
+				</div>
+
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{%static 'js/script.js'%}"></script>
+		<script>
+			window.onload= ()=>{
+				$("body").removeClass("preload");
+				$(".stuff-entry").css("opacity", "1")
+				$(".stuffs").css("top", parseFloat($("#homeButton").css("top")) + $("#homeButton").height() +"px")
+				setTimeout(()=>{
+					$("#homeButton").css("transition", "all .5s ease-in-out");
+				}, 500)
+			}			// document.addEventListener("DOMContentLoaded", function () {
+			// 	var container = document.getElementById("lmao");
+			// 	var parts = container.getElementsByTagName("div");
+			// 	for (var i = 0; i < parts.length; i++) {
+			// 		$(parts[i]).css("height", $(parts[0]).height());//sets base height
+			// 	}
+			// 	if ($(window).width() < 769){
+			// 		screen.orientation.lock("portrait");
+			// 	}
+			// })
+
+
+			function search() {
+							var input, filter, a, i, txtValue, lmao, lmaoparts;
+							input = document.getElementById("myInput");
+							filter = input.value.toUpperCase();
+							lmao = document.getElementById("lmao");
+							lmaoparts= lmao.getElementsByTagName("div");
+
+							for (i=0; i< lmaoparts.length;i++){
+											const lazy = lmaoparts[i];
+											a = lazy.getElementsByTagName("a")[0];
+											txtValue = a.textContent;
+
+											if(txtValue.toUpperCase().indexOf(filter) !== -1){
+															lazy.classList.remove("close");
+															lazy.style.display="inline-block";
+														}
+											else {//is not in search
+															$(lazy)
+																.addClass('close')
+																.on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function(){
+																				lazy.style.display="none";
+
+																			})
+														}
+										}
+						}
+		</script>
+	</body>
+</html>
