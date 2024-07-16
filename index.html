@@ -118,6 +118,7 @@
                                 let objects = $(".mainHomeText");
                                 $(".mainHomeText").css("animation", "mainHomeTextSlideOut 1s");
                                 setTimeout(()=>{
+                                    //set timeout for css transition
                                     setHomeText(objects[0], "ABOUT")
                                     setHomeText(objects[1],"CONTACT");
                                     setHomeText(objects[2],"PROJECTS");
